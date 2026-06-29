@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Flota od 10 potpuno novih quadova — Segway AT5L, Linhai 550L, Linhai 650 Landforce, Linhai 1000. Automatik, 4×4, koferi, USB-C punjač.">
+<title>Flota quadova — Quad Rent Zagreb</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Početna</a>
+  <a href="quad.html" onclick="toggleMenu()">Flota</a>
+  <a href="obitelj.html" onclick="toggleMenu()">Obitelj</a>
+  <a href="cijene.html" onclick="toggleMenu()">Cijene</a>
+  <a href="rute.html" onclick="toggleMenu()">Rute</a>
+  <a href="faq.html" onclick="toggleMenu()">Pitanja</a>
+  <a href="kontakt.html" onclick="toggleMenu()">Kontakt</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+</div>
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a>
+    <div class="nav__links">
+      <a href="quad.html" class="active">Flota</a>
+      <a href="obitelj.html">Obitelj</a>
+      <a href="cijene.html">Cijene</a>
+      <a href="rute.html">Rute</a>
+      <a href="faq.html">Pitanja</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button>
+    <button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero hero--short">
+  <div class="hero__bg ph"><span class="hero__bg-label">Foto — svi quadovi u redu, bočno</span></div>
+  <div class="container hero__content">
+    <div class="section-overline">Flota</div>
+    <h1 class="hero__headline" style="margin-top:0.6rem">10 zvijeri na<br>četiri kotača.</h1>
+    <p class="hero__sub">Potpuno nova flota. 4 modela. Automatik, 4×4, koferi, USB-C punjač, prva pomoć — sve na svakom quadu.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <h2 class="section-title">Svaki quad dolazi opremljen</h2>
+    <p class="section-desc mb-3">Zaboravite na istrošena vozila i kompromise. Svih 10 quadova je potpuno novo, redovito servisirano i provjereno prije svake vožnje.</p>
+    <div class="grid-3">
+      <div class="info-card"><div class="info-card__icon">🧳</div><div><div class="info-card__title">Prednji i stražnji kofer</div><div class="info-card__text">Dovoljno mjesta za ruksake, jakne, hranu i piće za cjelodnevne izlete.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">📱</div><div><div class="info-card__title">Nosač mobitela + USB-C</div><div class="info-card__text">Pratite GPS rutu, slušajte muziku ili punite mobitel/IQOS usput.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🩹</div><div><div class="info-card__title">Prva pomoć + aparat</div><div class="info-card__text">Svaki quad ima komplet prve pomoći i protupožarni aparat. Sigurnost na prvom mjestu.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">👥</div><div><div class="info-card__title">Registrirani za 2 osobe</div><div class="info-card__text">Svi modeli su registrirani za vozača i suvozača. Prostrana sjedala, udobna vožnja za oboje.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">⚙️</div><div><div class="info-card__title">Automatski mjenjač</div><div class="info-card__text">Nema šaltanja. Gas, kočnica i upravljač — to je sve što trebate znati.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🔧</div><div><div class="info-card__title">Servis prije svake vožnje</div><div class="info-card__text">16 godina iskustva u auto-industriji. Tehnička ispravnost i besprijekoran izgled su naš standard.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODEL 1: SEGWAY AT5L ═══ -->
+<section class="page-section reveal" id="segway">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="model-grid">
+      <div class="ph" style="border-radius:var(--r-xl);min-height:300px;aspect-ratio:16/10"><span>Foto — Segway AT5L na terenu</span></div>
+      <div>
+        <span class="chip chip--accent mb-2">4 vozila u floti</span>
+        <h2 class="section-title mt-1">Segway AT5L</h2>
+        <p class="section-desc">Sinonim za agilnost i modernu tehnologiju. Savršen balans snage i okretnosti. Premium osjećaj i vrhunska kontrola na zahtjevnim off-road stazama. Dostupni u narančastoj i bijeloj boji.</p>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
+          <span class="chip">Automatik</span><span class="chip">4×4</span><span class="chip">EFI</span><span class="chip">Koferi</span><span class="chip">USB-C</span>
+        </div>
+        <div style="display:flex;gap:1.5rem;margin-top:1.2rem;padding-top:0.8rem;border-top:1px solid var(--border)">
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€100</div><div style="font-size:0.5rem;color:var(--text-3)">POLA DANA / 6H</div></div>
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€150</div><div style="font-size:0.5rem;color:var(--text-3)">CIJELI DAN / 12H</div></div>
+        </div>
+        <button class="btn btn--accent mt-3" onclick="openBooking('standard','half')">Rezerviraj Segway AT5L →</button>
+      </div>
+    </div>
+    <div class="grid-2 mt-3">
+      <div class="ph" style="border-radius:var(--r-md);aspect-ratio:4/3"><span>Foto — AT5L narančasti, profil</span></div>
+      <div class="ph" style="border-radius:var(--r-md);aspect-ratio:4/3"><span>Foto — AT5L bijeli, na stazi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODEL 2: LINHAI 550L ═══ -->
+<section class="page-section page-section--border reveal" id="linhai550">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="model-grid">
+      <div class="ph" style="border-radius:var(--r-xl);min-height:300px;aspect-ratio:16/10;background:#1a1816"><span>Foto — Linhai 550L crni</span></div>
+      <div>
+        <span class="chip mb-2">2 vozila u floti</span>
+        <h2 class="section-title mt-1">Linhai 550L</h2>
+        <p class="section-desc">Pouzdani, robusni i spremni na sve. Crni snagatori savršeni za one koji prvi put isprobavaju quad iskustvo, ali i za iskusne vozače koji cijene stabilnost i udobnost na dugim rutama.</p>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
+          <span class="chip">550cc</span><span class="chip">4×4</span><span class="chip">EFI</span><span class="chip">CVT</span><span class="chip">Koferi</span>
+        </div>
+        <div style="display:flex;gap:1.5rem;margin-top:1.2rem;padding-top:0.8rem;border-top:1px solid var(--border)">
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€100</div><div style="font-size:0.5rem;color:var(--text-3)">POLA DANA / 6H</div></div>
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€150</div><div style="font-size:0.5rem;color:var(--text-3)">CIJELI DAN / 12H</div></div>
+        </div>
+        <button class="btn btn--accent mt-3" onclick="openBooking('standard','half')">Rezerviraj Linhai 550L →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODEL 3: LINHAI 650 LANDFORCE ═══ -->
+<section class="page-section reveal" id="linhai650">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="model-grid">
+      <div class="ph" style="border-radius:var(--r-xl);min-height:300px;aspect-ratio:16/10;background:#181a16"><span>Foto — Linhai 650 Landforce maskirni</span></div>
+      <div>
+        <span class="chip chip--accent mb-2">2 vozila u floti</span>
+        <h2 class="section-title mt-1">Linhai 650 Landforce</h2>
+        <p class="section-desc">Pravi terenski ratnici! S atraktivnim maskirnim dizajnom i dodatnom snagom, stvoreni su za duboko blato, strme uspone i ultimativno stapanje s prirodom.</p>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
+          <span class="chip">650cc</span><span class="chip">4×4</span><span class="chip">EFI</span><span class="chip chip--accent">Off-road</span><span class="chip">Koferi</span>
+        </div>
+        <div style="display:flex;gap:1.5rem;margin-top:1.2rem;padding-top:0.8rem;border-top:1px solid var(--border)">
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€100</div><div style="font-size:0.5rem;color:var(--text-3)">POLA DANA / 6H</div></div>
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€150</div><div style="font-size:0.5rem;color:var(--text-3)">CIJELI DAN / 12H</div></div>
+        </div>
+        <button class="btn btn--accent mt-3" onclick="openBooking('standard','half')">Rezerviraj Linhai 650 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODEL 4: LINHAI 1000 ═══ -->
+<section class="page-section page-section--border reveal" id="linhai1000">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="model-grid">
+      <div class="ph" style="border-radius:var(--r-xl);min-height:300px;aspect-ratio:16/10;background:#1c1810;border:1px solid rgba(245,166,35,0.15)"><span>Foto — Linhai 1000, kralj terena</span></div>
+      <div>
+        <span class="chip chip--accent mb-2">2 vozila · Kraljevi terena</span>
+        <h2 class="section-title mt-1">Linhai 1000</h2>
+        <p class="section-desc">Čista brutalna snaga za one koji ne pristaju na kompromise. Kada vam treba maksimalni adrenalin i performanse koje lome sve prepreke, ovi quadovi dominiraju svakom rutom.</p>
+        <div style="display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:1rem">
+          <span class="chip">1000cc</span><span class="chip">4×4</span><span class="chip chip--accent">Max snaga</span><span class="chip">Koferi</span>
+        </div>
+        <div style="display:flex;gap:1.5rem;margin-top:1.2rem;padding-top:0.8rem;border-top:1px solid var(--border)">
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€80</div><div style="font-size:0.5rem;color:var(--text-3)">POLA DANA / 6H</div></div>
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem">€150</div><div style="font-size:0.5rem;color:var(--text-3)">CIJELI DAN / 12H</div></div>
+        </div>
+        <button class="btn btn--accent mt-3" onclick="openBooking('linhai1000','half')">Rezerviraj Linhai 1000 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-section reveal">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">10 quadova. Tvoj izbor.</h2>
+    <p class="section-desc" style="margin:0.5rem auto 1.5rem;text-align:center">Teambuilding, momačka, vikend u dvoje ili solo avantura — imamo quad za svakoga.</p>
+    <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+    <a href="cijene.html" class="btn btn--ghost" style="margin-left:0.5rem">Pogledaj cijene</a>
+  </div>
+</section>
+
+<!-- BOOKING MODAL (same as index) -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()">
+  <div class="modal">
+    <button class="modal__close" onclick="closeBooking()">✕</button>
+    <div class="modal__title">Rezerviraj vožnju</div>
+    <div class="modal__sub">Odaberi opcije i pošalji nam WhatsApp poruku</div>
+    <div class="modal__group"><label class="modal__label">Tip quada</label><div class="modal__toggle modal__toggle--3" id="typeToggle"><button class="modal__toggle-btn active" data-type="standard" onclick="setType('standard')">Standard<span class="toggle-price">550-650cc</span></button><button class="modal__toggle-btn" data-type="linhai1000" onclick="setType('linhai1000')">Linhai 1000<span class="toggle-price">1000cc</span></button><button class="modal__toggle-btn" data-type="kids" onclick="setType('kids')">Dječji<span class="toggle-price">6+ god</span></button></div></div>
+    <div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price" id="halfPrice">€100</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price" id="fullPrice">€150</span></button></div></div>
+    <div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div>
+    <div class="modal__group"><label class="modal__label">Broj quadova</label><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount(-1)">−</button><span class="modal__stepper-val" id="countVal">1</span><button class="modal__stepper-btn" onclick="changeCount(1)">+</button></div></div>
+    <div class="modal__summary"><div class="modal__summary-row"><span>Quad</span><span id="sumType">Quad (Segway / Linhai 550 / 650)</span></div><div class="modal__summary-row"><span>Trajanje</span><span id="sumDur">Pola dana (6h)</span></div><div class="modal__summary-row"><span>Quadova</span><span id="sumCount">1</span></div><div class="modal__summary-total"><span>Ukupno</span><span id="sumTotal">€100</span></div></div>
+    <button class="btn btn--accent btn--block" onclick="sendWhatsApp()" style="padding:0.85rem;font-size:0.85rem"><svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.61.61l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.317 0-4.46-.768-6.184-2.064l-.432-.326-2.642.886.886-2.642-.326-.432A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg> Pošalji WhatsApp poruku</button>
+    <p class="modal__note">Poruka se otvara u WhatsAppu. Potvrđujemo u minutama.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a><p>10 novih quadova. 16 godina iskustva u auto-industriji.</p></div>
+      <div><div class="footer__col-title">Stranice</div><ul class="footer__links"><li><a href="quad.html">Flota</a></li><li><a href="obitelj.html">Obitelj</a></li><li><a href="cijene.html">Cijene</a></li><li><a href="rute.html">Rute</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><div class="footer__col-title">Info</div><ul class="footer__links"><li><a href="faq.html">Pitanja</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div>
+      <div><div class="footer__col-title">Kontakt</div><ul class="footer__links"><li><a href="https://wa.me/385955442541">WhatsApp</a></li><li><a href="tel:+385955442541">+385 95 544 2541</a></li></ul><div class="footer__socials mt-2"><a href="#">IG</a><a href="#">TT</a><a href="#">YT</a><a href="#">FB</a></div></div>
+    </div>
+    <div class="footer__bottom"><p>© 2026 Quad Rent Zagreb.</p><p>Velikopoljska 22A, Veliko Polje, Novi Zagreb</p></div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<style>@media(min-width:700px){.model-grid{grid-template-columns:1.2fr 1fr !important}}</style>
+</body>
+</html>

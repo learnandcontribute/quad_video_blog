@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Dječji quadovi za djecu od 6 godina u okolici Zagreba. 30km prikladnih staza, obuka i oprema uključeni. Jedini u Zagrebu!">
+<title>Obitelj i dječji quadovi — Quad Rent Zagreb</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="toggleMenu()">Početna</a><a href="quad.html" onclick="toggleMenu()">Flota</a><a href="obitelj.html" onclick="toggleMenu()">Obitelj</a><a href="cijene.html" onclick="toggleMenu()">Cijene</a><a href="rute.html" onclick="toggleMenu()">Rute</a><a href="faq.html" onclick="toggleMenu()">Pitanja</a><a href="kontakt.html" onclick="toggleMenu()">Kontakt</a><a href="blog.html" onclick="toggleMenu()">Blog</a></div>
+<nav class="nav" id="nav"><div class="container nav__inner"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a><div class="nav__links"><a href="quad.html">Flota</a><a href="obitelj.html" class="active">Obitelj</a><a href="cijene.html">Cijene</a><a href="rute.html">Rute</a><a href="faq.html">Pitanja</a><a href="kontakt.html">Kontakt</a><a href="blog.html">Blog</a></div><button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button><button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button></div></nav>
+
+<section class="hero hero--short">
+  <div class="hero__bg ph"><span class="hero__bg-label">Foto — obitelj na quadovima, djeca i roditelji</span></div>
+  <div class="container hero__content">
+    <span class="chip chip--accent">Jedini u Zagrebu</span>
+    <h1 class="hero__headline" style="margin-top:0.6rem">Dovedi i klince.</h1>
+    <p class="hero__sub">Dječji quadovi za djecu od 6 godina. Mama i tata na velikim quadovima, djeca na svojima. Prava obiteljska off-road avantura.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="page-section reveal">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="family-grid">
+      <div>
+        <h2 class="section-title">Obiteljska avantura kakvu nećete naći drugdje</h2>
+        <p class="section-desc mt-2">U neposrednoj blizini naše baze nalazi se oko 30 km staza i makadamskih poljskih puteva koji su savršeno prikladni za najmlađe vozače. Široki putevi, blagi usponi i sigurno okruženje.</p>
+
+        <div class="grid-2 mt-3">
+          <div class="info-card"><div class="info-card__icon" style="font-size:1.1rem">6+</div><div><div class="info-card__title">Minimalna dob</div><div class="info-card__text">Dječji quadovi su za djecu od 6 godina na dalje, uz obaveznu prethodnu obuku.</div></div></div>
+          <div class="info-card"><div class="info-card__icon">👨‍👩‍👧</div><div><div class="info-card__title">Nadzor roditelja</div><div class="info-card__text">Roditelj ili pratnja je u potpunosti odgovoran za dijete i vozilo kojim dijete upravlja.</div></div></div>
+          <div class="info-card"><div class="info-card__icon">🛡</div><div><div class="info-card__title">Obuka uključena</div><div class="info-card__text">Prije vožnje provodimo kratku obuku za dijete. Automatski mjenjač — jednostavno i sigurno.</div></div></div>
+          <div class="info-card"><div class="info-card__icon">⚠️</div><div><div class="info-card__title">Nisu za cestu</div><div class="info-card__text">Dječji quadovi nisu registrirani za cestovnu vožnju. Namijenjeni su isključivo za poljske puteve i makadam.</div></div></div>
+        </div>
+
+        <div style="display:flex;gap:1.5rem;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);flex-wrap:wrap">
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.5rem">€60</div><div style="font-size:0.5rem;color:var(--text-3);letter-spacing:0.06em;text-transform:uppercase">Pola dana / 6h</div></div>
+          <div><div style="font-family:var(--font-d);font-weight:700;font-size:1.5rem">€120</div><div style="font-size:0.5rem;color:var(--text-3);letter-spacing:0.06em;text-transform:uppercase">Cijeli dan / 12h</div></div>
+        </div>
+
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.2rem">
+          <button class="btn btn--accent" onclick="openBooking('kids','half')">Rezerviraj dječji quad →</button>
+          <a href="cijene.html" class="btn btn--ghost btn--sm">Sve cijene</a>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="ph" style="border-radius:var(--r-md);aspect-ratio:4/5"><span>Foto — dijete na quadu</span></div>
+        <div class="ph" style="border-radius:var(--r-md);aspect-ratio:4/5;background:#1a1816"><span>Foto — obitelj na stazi</span></div>
+        <div class="ph" style="border-radius:var(--r-md);grid-column:1/-1;aspect-ratio:2/1;background:#181a16"><span>Foto — dječji quad detalj, široki makadam</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED FOR KIDS -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <h2 class="section-title mb-3">Što dobivate</h2>
+    <div class="grid-3">
+      <div class="info-card"><div class="info-card__icon">🏍</div><div><div class="info-card__title">Dječji quad</div><div class="info-card__text">Prilagođen veličinom i snagom za djecu. Automatski mjenjač.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">⛑️</div><div><div class="info-card__title">Dječja oprema</div><div class="info-card__text">Kaciga, zaštitne naočale — sve prilagođeno veličini djeteta. Uključeno u cijenu.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">📋</div><div><div class="info-card__title">Obuka i priprema</div><div class="info-card__text">Naš instruktor provodi kratku obuku s djetetom na ravnom terenu prije izlaska na stazu.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🗺️</div><div><div class="info-card__title">30 km prikladnih staza</div><div class="info-card__text">Makadamski i poljski putevi u neposrednoj blizini. Široki, pregledni i sigurni za djecu.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🅿️</div><div><div class="info-card__title">Besplatan parking</div><div class="info-card__text">Siguran parking za vaš auto dok ste na vožnji. Bez dodatnih troškova.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">📸</div><div><div class="info-card__title">Nezaboravni trenuci</div><div class="info-card__text">Blatnjava djeca, nasmijani roditelji — ovo je vikend koji se pamti.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-section reveal">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">Planirate obiteljski izlet?</h2>
+    <p class="section-desc" style="margin:0.5rem auto 1.5rem;text-align:center">Roditelji na velikim quadovima, djeca na svojima. Javite nam koliko vas dolazi.</p>
+    <button class="btn btn--accent" onclick="openBooking('kids','half')">Rezerviraj obiteljsku vožnju →</button>
+    <a href="https://wa.me/385955442541" target="_blank" rel="noopener" class="btn btn--ghost" style="margin-left:0.5rem">WhatsApp za pitanja</a>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()"><div class="modal"><button class="modal__close" onclick="closeBooking()">✕</button><div class="modal__title">Rezerviraj vožnju</div><div class="modal__sub">Odaberi opcije i pošalji nam WhatsApp poruku</div><div class="modal__group"><label class="modal__label">Tip quada</label><div class="modal__toggle modal__toggle--3" id="typeToggle"><button class="modal__toggle-btn" data-type="standard" onclick="setType('standard')">Standard<span class="toggle-price">550-650cc</span></button><button class="modal__toggle-btn" data-type="linhai1000" onclick="setType('linhai1000')">Linhai 1000<span class="toggle-price">1000cc</span></button><button class="modal__toggle-btn active" data-type="kids" onclick="setType('kids')">Dječji<span class="toggle-price">6+ god</span></button></div></div><div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price" id="halfPrice">€60</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price" id="fullPrice">€120</span></button></div></div><div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div><div class="modal__group"><label class="modal__label">Broj quadova</label><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount(-1)">−</button><span class="modal__stepper-val" id="countVal">1</span><button class="modal__stepper-btn" onclick="changeCount(1)">+</button></div></div><div class="modal__summary"><div class="modal__summary-row"><span>Quad</span><span id="sumType">Dječji quad</span></div><div class="modal__summary-row"><span>Trajanje</span><span id="sumDur">Pola dana (6h)</span></div><div class="modal__summary-row"><span>Quadova</span><span id="sumCount">1</span></div><div class="modal__summary-total"><span>Ukupno</span><span id="sumTotal">€60</span></div></div><button class="btn btn--accent btn--block" onclick="sendWhatsApp()" style="padding:0.85rem">Pošalji WhatsApp poruku</button><p class="modal__note">Potvrđujemo u minutama.</p></div></div>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div class="footer__brand"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a></div><div><div class="footer__col-title">Stranice</div><ul class="footer__links"><li><a href="quad.html">Flota</a></li><li><a href="obitelj.html">Obitelj</a></li><li><a href="cijene.html">Cijene</a></li><li><a href="rute.html">Rute</a></li></ul></div><div><div class="footer__col-title">Info</div><ul class="footer__links"><li><a href="faq.html">Pitanja</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div><div><div class="footer__col-title">Kontakt</div><ul class="footer__links"><li><a href="https://wa.me/385955442541">WhatsApp</a></li><li><a href="tel:+385955442541">+385 95 544 2541</a></li></ul></div></div><div class="footer__bottom"><p>© 2026 Quad Rent Zagreb.</p><p>Velikopoljska 22A, Veliko Polje, Novi Zagreb</p></div></div></footer>
+<script src="main.js"></script>
+<style>@media(min-width:700px){.family-grid{grid-template-columns:1fr 1fr !important}}</style>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="O nama — 16 godina perfekcionizma i strasti prema vozilima. Quad Rent Zagreb, Velikopoljska 22A, Veliko Polje, 10010 Zagreb.">
+<title>O nama — Quad Rent Zagreb</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="toggleMenu()">Početna</a><a href="quad.html" onclick="toggleMenu()">Flota</a><a href="obitelj.html" onclick="toggleMenu()">Obitelj</a><a href="cijene.html" onclick="toggleMenu()">Cijene</a><a href="rute.html" onclick="toggleMenu()">Rute</a><a href="faq.html" onclick="toggleMenu()">Pitanja</a><a href="o-nama.html" onclick="toggleMenu()">O nama</a><a href="blog.html" onclick="toggleMenu()">Blog</a></div>
+<nav class="nav" id="nav"><div class="container nav__inner"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a><div class="nav__links"><a href="quad.html">Flota</a><a href="obitelj.html">Obitelj</a><a href="cijene.html">Cijene</a><a href="rute.html">Rute</a><a href="faq.html">Pitanja</a><a href="o-nama.html" class="active">O nama</a><a href="blog.html">Blog</a></div><button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button><button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button></div></nav>
+
+<!-- HERO -->
+<section class="hero hero--short">
+  <div class="hero__bg ph"><span class="hero__bg-label">Foto — tim u radionici, quadovi u pozadini</span></div>
+  <div class="container hero__content">
+    <div class="section-overline">O nama</div>
+    <h1 class="hero__headline" style="margin-top:0.6rem;font-size:clamp(1.6rem,4.5vw,3rem)">16 godina perfekcionizma<br>i strasti.</h1>
+    <p class="hero__sub">Detalji čine razliku: tko stoji iza najboljeg najma quadova u Zagrebu?</p>
+  </div>
+</section>
+
+<!-- O NAMA -->
+<section class="page-section reveal">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:2rem" class="about-grid">
+      <div>
+        <p class="section-desc">Kada iznajmljujete quad, ne unajmljujete samo komad metala i plastike — unajmljujete povjerenje, sigurnost i tehničku ispravnost stroja na teškom terenu.</p>
+
+        <p class="section-desc mt-2">Iza našeg brenda stoji ponosno nasljeđe od 16 godina profesionalnog iskustva u automobilskoj industriji i održavanju estetike i mehanike vozila. Kroz naš rad naučili smo jedno pravilo od kojeg nikada ne odstupamo: perfekcionizam u svemu.</p>
+
+        <p class="section-desc mt-2">Baš kao što u našem vrhunskom poslovanju s detailingom svako vozilo tretiramo s kirurškom preciznošću, isti taj mentalitet primjenjujemo i na našu flotu quadova. Naši Segway i Linhai modeli ne prolaze samo površno pranje. Nakon svake vožnje, svaki quad se detaljno pregledava, podmazuje, tehnički provjerava i dubinski čisti.</p>
+
+        <p class="section-desc mt-2">Kada sjednete na naš quad, sjedate na stroj koji je u tvorničkom stanju, besprijekorno čist i 100% spreman za najveće napore. Naših 16 godina strasti prema automobilima i motorima vaša je najveća garancija sigurnosti i vrhunskog iskustva.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem">
+        <div class="ph" style="border-radius:var(--r-xl);flex:1;min-height:280px"><span>Foto — tim u radionici, pregled quada</span></div>
+        <div class="ph" style="border-radius:var(--r-md);min-height:160px;background:#1a1816"><span>Foto — čišćenje / detailing quada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARDI -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <h2 class="section-title mb-3">Naši standardi</h2>
+    <div class="grid-2">
+      <div class="info-card"><div class="info-card__icon">🔧</div><div><div class="info-card__title">Pregled nakon svake vožnje</div><div class="info-card__text">Tehnička provjera, podmazivanje, dubinsko čišćenje — svaki quad se vraća u tvorničko stanje.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🏆</div><div><div class="info-card__title">16 godina u industriji</div><div class="info-card__text">Profesionalno iskustvo u automobilskoj industriji, detailingu i održavanju vozila.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">✨</div><div><div class="info-card__title">Detailing mentalitet</div><div class="info-card__text">Isti perfekcionizam koji primjenjujemo u auto-detailingu primjenjujemo na quadove.</div></div></div>
+      <div class="info-card"><div class="info-card__icon">🛡</div><div><div class="info-card__title">100% sigurnost</div><div class="info-card__text">Svaki quad je tehnički ispravan, potpuno nov i spreman za najteži teren.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOTA PREVIEW -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <div class="section-header">
+      <div><h2 class="section-title">10 quadova. 4 modela.</h2><p class="section-desc">Potpuno nova flota — od agilnog Segwaya do brutalnog Linhai 1000.</p></div>
+      <a href="quad.html" class="btn btn--ghost btn--sm">Pogledaj flotu →</a>
+    </div>
+    <div style="display:flex;gap:0.4rem;flex-wrap:wrap">
+      <span class="chip">4× Segway AT5L</span><span class="chip">2× Linhai 550L</span><span class="chip">2× Linhai 650 Landforce</span><span class="chip chip--accent">2× Linhai 1000</span>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="page-section reveal">
+  <div class="container">
+    <h2 class="section-title mb-3">Kontakt i lokacija</h2>
+    <div style="display:grid;grid-template-columns:1fr;gap:2rem" class="contact-grid">
+      <div>
+        <div style="display:flex;flex-direction:column;gap:1.2rem;margin-bottom:2rem">
+          <div>
+            <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.3rem">WhatsApp / Telefon</div>
+            <div style="font-family:var(--font-d);font-weight:700;font-size:1.3rem"><a href="tel:+385955442541" style="color:var(--accent)">+385 95 544 2541</a></div>
+          </div>
+          <div>
+            <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.3rem">Email</div>
+            <div style="font-size:0.85rem;color:var(--text-2)" class="tbd">⚠ Email adresa — čeka se</div>
+          </div>
+          <div>
+            <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.3rem">Adresa</div>
+            <div style="font-size:0.85rem;color:var(--text-2)">Velikopoljska 22A<br>Veliko Polje, 10010 Zagreb</div>
+          </div>
+          <div>
+            <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.3rem">Radno vrijeme</div>
+            <div style="font-size:0.85rem;color:var(--text-2)">Ponedjeljak – Nedjelja<br>07:00 – 22:00</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem">
+          <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+          <a href="https://wa.me/385955442541" target="_blank" rel="noopener" class="btn btn--ghost">WhatsApp →</a>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.6rem">
+          <div class="info-card"><div class="info-card__icon">🅿️</div><div><div class="info-card__title">Besplatan parking</div><div class="info-card__text">Siguran i besplatan parking za vaš auto dok ste na vožnji.</div></div></div>
+          <div class="info-card"><div class="info-card__icon">🚗</div><div><div class="info-card__title">Lako dostupno</div><div class="info-card__text">~20 min autom od centra Zagreba. Taksi, Uber ili vlastiti auto.</div></div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--border);min-height:350px;flex:1">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5568.963136108243!2d16.012577275775804!3d45.74149081489528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667f6e2e41adf7%3A0xa85f0abc58bedd95!2sVelikopoljska%20ul.%2022a%2C%2010000%2C%20Veliko%20Polje%2C%20Croatia!5e0!3m2!1sen!2sus!4v1780252780141!5m2!1sen!2sus" width="100%" height="100%" style="border:0;min-height:350px;display:block;filter:saturate(0.3) brightness(0.8)" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <a href="https://maps.google.com/?q=45.74149,16.01258" target="_blank" rel="noopener" class="btn btn--ghost btn--block btn--sm">Otvori u Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="page-section reveal">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title mb-2">Pratite nas</h2>
+    <div class="footer__socials" style="justify-content:center;gap:0.8rem">
+      <a href="#" style="width:44px;height:44px;font-size:0.62rem">IG</a>
+      <a href="#" style="width:44px;height:44px;font-size:0.62rem">TT</a>
+      <a href="#" style="width:44px;height:44px;font-size:0.62rem">YT</a>
+      <a href="#" style="width:44px;height:44px;font-size:0.62rem">FB</a>
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()"><div class="modal"><button class="modal__close" onclick="closeBooking()">✕</button><div class="modal__title">Rezerviraj vožnju</div><div class="modal__sub">Odaberi opcije i pošalji nam WhatsApp poruku</div><div class="modal__group"><label class="modal__label">Tip quada</label><div class="modal__toggle" id="typeToggle" style="grid-template-columns:1fr 1fr;gap:0.35rem"><button class="modal__toggle-btn active" data-type="segway" onclick="setType('segway')">Segway AT5L<span class="toggle-price">4 vozila</span></button><button class="modal__toggle-btn" data-type="linhai550" onclick="setType('linhai550')">Linhai 550L<span class="toggle-price">2 vozila</span></button><button class="modal__toggle-btn" data-type="linhai650" onclick="setType('linhai650')">Linhai 650<span class="toggle-price">2 vozila</span></button><button class="modal__toggle-btn" data-type="linhai1000" onclick="setType('linhai1000')">Linhai 1000<span class="toggle-price">2 vozila</span></button><button class="modal__toggle-btn" data-type="kids" onclick="setType('kids')">Dječji quad<span class="toggle-price">6+ god</span></button></div></div><div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price" id="halfPrice">€100</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price" id="fullPrice">€150</span></button></div></div><div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div><div class="modal__group"><label class="modal__label">Broj quadova</label><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount(-1)">−</button><span class="modal__stepper-val" id="countVal">1</span><button class="modal__stepper-btn" onclick="changeCount(1)">+</button></div></div><div class="modal__summary"><div class="modal__summary-row"><span>Quad</span><span id="sumType">Segway AT5L</span></div><div class="modal__summary-row"><span>Trajanje</span><span id="sumDur">Pola dana (6h)</span></div><div class="modal__summary-row"><span>Quadova</span><span id="sumCount">1</span></div><div class="modal__summary-total"><span>Ukupno</span><span id="sumTotal">€100</span></div></div><button class="btn btn--accent btn--block" onclick="sendWhatsApp()" style="padding:0.85rem">Pošalji WhatsApp poruku</button><p class="modal__note">Potvrđujemo u minutama. <a href="pravila.html" style="color:var(--accent)">Pravila i uvjeti najma</a></p></div></div>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div class="footer__brand"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a></div><div><div class="footer__col-title">Stranice</div><ul class="footer__links"><li><a href="quad.html">Flota</a></li><li><a href="obitelj.html">Obitelj</a></li><li><a href="cijene.html">Cijene</a></li><li><a href="rute.html">Rute</a></li></ul></div><div><div class="footer__col-title">Info</div><ul class="footer__links"><li><a href="faq.html">Pitanja</a></li><li><a href="o-nama.html">O nama</a></li><li><a href="pravila.html">Pravila najma</a></li></ul></div><div><div class="footer__col-title">Kontakt</div><ul class="footer__links"><li><a href="https://wa.me/385955442541">WhatsApp</a></li><li><a href="tel:+385955442541">+385 95 544 2541</a></li></ul></div></div><div class="footer__bottom"><p>© 2026 Quad Rent Zagreb.</p><p>Velikopoljska 22A, Veliko Polje, 10010 Zagreb</p></div></div></footer>
+<script src="main.js"></script>
+<style>@media(min-width:700px){.contact-grid,.about-grid{grid-template-columns:1fr 1fr !important}}</style>
+</body>
+</html>

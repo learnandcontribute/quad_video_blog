@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Blog Quad Rent Zagreb — savjeti za quad vožnju, najbolje rute u okolici Zagreba, quad avantura s djecom.">
+<title>Blog — Quad Rent Zagreb</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="toggleMenu()">Početna</a><a href="quad.html" onclick="toggleMenu()">Flota</a><a href="obitelj.html" onclick="toggleMenu()">Obitelj</a><a href="cijene.html" onclick="toggleMenu()">Cijene</a><a href="rute.html" onclick="toggleMenu()">Rute</a><a href="faq.html" onclick="toggleMenu()">Pitanja</a><a href="kontakt.html" onclick="toggleMenu()">Kontakt</a><a href="blog.html" onclick="toggleMenu()">Blog</a></div>
+<nav class="nav" id="nav"><div class="container nav__inner"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a><div class="nav__links"><a href="quad.html">Flota</a><a href="obitelj.html">Obitelj</a><a href="cijene.html">Cijene</a><a href="rute.html">Rute</a><a href="faq.html">Pitanja</a><a href="kontakt.html">Kontakt</a><a href="blog.html" class="active">Blog</a></div><button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button><button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button></div></nav>
+
+<section class="hero hero--short" style="min-height:35vh;min-height:35svh">
+  <div class="hero__bg" style="background:var(--bg-alt)"></div>
+  <div class="container hero__content">
+    <div class="section-overline">Blog</div>
+    <h1 class="hero__headline" style="margin-top:0.6rem;font-size:clamp(1.8rem,5vw,3.5rem)">Savjeti, rute<br>i priče s terena.</h1>
+  </div>
+</section>
+
+<section class="page-section reveal">
+  <div class="container">
+    <div class="grid-3">
+
+      <!-- ARTICLE 1 -->
+      <article class="card" style="overflow:hidden">
+        <a href="blog-5.html" style="text-decoration:none;color:inherit;display:block">
+          <div class="ph" style="aspect-ratio:16/10;min-height:200px;"><span>Foto — obitelj na quadovima, djeca i roditelji na makadamu</span></div>
+          <div style="padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <span class="chip">Obitelj</span>
+              <span style="font-size:0.48rem;color:var(--text-4);letter-spacing:0.06em;text-transform:uppercase">28. lipnja 2026.</span>
+            </div>
+            <h2 style="font-family:var(--font-d);font-weight:700;font-size:1rem;line-height:1.3">Obiteljske avanture: off-road s djecom</h2>
+            <p style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Zašto je vožnja quada najbolji vikend izlet za cijelu obitelj.</p>
+            <div style="margin-top:auto;padding-top:0.5rem">
+              <span style="font-size:0.58rem;color:var(--accent);font-weight:500">Čitaj više →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- ARTICLE 2 -->
+      <article class="card" style="overflow:hidden">
+        <a href="blog-4.html" style="text-decoration:none;color:inherit;display:block">
+          <div class="ph" style="aspect-ratio:16/10;min-height:200px;background:#1a1816"><span>Foto — quad parkiran ispred konobe, ekipa za stolom</span></div>
+          <div style="padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <span class="chip">Gastronomija</span>
+              <span style="font-size:0.48rem;color:var(--text-4);letter-spacing:0.06em;text-transform:uppercase">23. lipnja 2026.</span>
+            </div>
+            <h2 style="font-family:var(--font-d);font-weight:700;font-size:1rem;line-height:1.3">Adrenalin otvara apetit</h2>
+            <p style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Gdje najbolje jesti nakon off-road avanture u Zagrebu i okolici.</p>
+            <div style="margin-top:auto;padding-top:0.5rem">
+              <span style="font-size:0.58rem;color:var(--accent);font-weight:500">Čitaj više →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- ARTICLE 3 -->
+      <article class="card" style="overflow:hidden">
+        <a href="blog-3.html" style="text-decoration:none;color:inherit;display:block">
+          <div class="ph" style="aspect-ratio:16/10;min-height:200px;background:#181a16"><span>Foto — quad u dubokoj lokvi, voda prska na sve strane</span></div>
+          <div style="padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <span class="chip">Savjeti</span>
+              <span style="font-size:0.48rem;color:var(--text-4);letter-spacing:0.06em;text-transform:uppercase">19. lipnja 2026.</span>
+            </div>
+            <h2 style="font-family:var(--font-d);font-weight:700;font-size:1rem;line-height:1.3">Kiša i loše vrijeme? Savršeno.</h2>
+            <p style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Zašto je vožnja quada po blatu najbolja odluka ikad.</p>
+            <div style="margin-top:auto;padding-top:0.5rem">
+              <span style="font-size:0.58rem;color:var(--accent);font-weight:500">Čitaj više →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- ARTICLE 4 -->
+      <article class="card" style="overflow:hidden">
+        <a href="blog-2.html" style="text-decoration:none;color:inherit;display:block">
+          <div class="ph" style="aspect-ratio:16/10;min-height:200px;background:#16181a"><span>Foto — drone shot panorame staze prema Sljemenu</span></div>
+          <div style="padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <span class="chip">Rute</span>
+              <span style="font-size:0.48rem;color:var(--text-4);letter-spacing:0.06em;text-transform:uppercase">12. lipnja 2026.</span>
+            </div>
+            <h2 style="font-family:var(--font-d);font-weight:700;font-size:1rem;line-height:1.3">Osvojite najbolje off-road rute u Zagrebu</h2>
+            <p style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Od kamenoloma Markuševec do epske 48-kilometarske avanture prema Pokupskom.</p>
+            <div style="margin-top:auto;padding-top:0.5rem">
+              <span style="font-size:0.58rem;color:var(--accent);font-weight:500">Čitaj više →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      <!-- ARTICLE 5 -->
+      <article class="card" style="overflow:hidden">
+        <a href="blog-1.html" style="text-decoration:none;color:inherit;display:block">
+          <div class="ph" style="aspect-ratio:16/10;min-height:200px;background:#1a181a"><span>Foto — početnik na Segway AT5L, obuka prije polaska</span></div>
+          <div style="padding:1.2rem;display:flex;flex-direction:column;gap:0.5rem">
+            <div style="display:flex;gap:0.5rem;align-items:center">
+              <span class="chip">Savjeti</span>
+              <span style="font-size:0.48rem;color:var(--text-4);letter-spacing:0.06em;text-transform:uppercase">5. lipnja 2026.</span>
+            </div>
+            <h2 style="font-family:var(--font-d);font-weight:700;font-size:1rem;line-height:1.3">Prvi put na quadu? Ultimativni vodič za početnike</h2>
+            <p style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Kako preživjeti, uživati i osvojiti off-road terene oko Zagreba bez ijedne ogrebotine.</p>
+            <div style="margin-top:auto;padding-top:0.5rem">
+              <span style="font-size:0.58rem;color:var(--accent);font-weight:500">Čitaj više →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-section reveal">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">Nemojte čekati da vikend propadne.</h2>
+    <p class="section-desc" style="margin:0.5rem auto 1.5rem;text-align:center">Zgrabite ključeve i oslobodite zvijer na četiri kotača.</p>
+    <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+  </div>
+</section>
+
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()"><div class="modal"><button class="modal__close" onclick="closeBooking()">✕</button><div class="modal__title">Rezerviraj vožnju</div><div class="modal__sub">Odaberi quadove i pošalji WhatsApp poruku</div><div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price">6h</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price">12h</span></button></div></div><div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div><div class="modal__group"><label class="modal__label">Odaberi quadove</label><div class="quad-picker"><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Segway AT5L</div><div class="quad-row__meta">€100 / €150 · max 4</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('segway',-1)">−</button><span class="modal__stepper-val" id="count-segway">0</span><button class="modal__stepper-btn" onclick="changeCount('segway',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 550L</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai550',-1)">−</button><span class="modal__stepper-val" id="count-linhai550">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai550',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 650 Landforce</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai650',-1)">−</button><span class="modal__stepper-val" id="count-linhai650">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai650',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 1000</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai1000',-1)">−</button><span class="modal__stepper-val" id="count-linhai1000">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai1000',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Dječji quad</div><div class="quad-row__meta">€60 / €120 · max 2 · 6+ god</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('kids',-1)">−</button><span class="modal__stepper-val" id="count-kids">0</span><button class="modal__stepper-btn" onclick="changeCount('kids',1)">+</button></div></div></div></div><div class="modal__summary" id="bookSummary"><div class="modal__summary-empty" id="summaryEmpty">Dodajte barem jedan quad</div><div class="modal__summary-total" id="summaryTotal" style="display:none"><span>Ukupno</span><span id="sumTotal">€0</span></div></div><button class="btn btn--accent btn--block" id="bookSubmit" onclick="sendWhatsApp()" style="padding:0.85rem" disabled>Pošalji WhatsApp poruku</button><p class="modal__note">Potvrđujemo u minutama.</p></div></div>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div class="footer__brand"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a></div><div><div class="footer__col-title">Stranice</div><ul class="footer__links"><li><a href="quad.html">Flota</a></li><li><a href="obitelj.html">Obitelj</a></li><li><a href="cijene.html">Cijene</a></li><li><a href="rute.html">Rute</a></li></ul></div><div><div class="footer__col-title">Info</div><ul class="footer__links"><li><a href="faq.html">Pitanja</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div><div><div class="footer__col-title">Kontakt</div><ul class="footer__links"><li><a href="https://wa.me/385955442541">WhatsApp</a></li><li><a href="tel:+385955442541">+385 95 544 2541</a></li></ul></div></div><div class="footer__bottom"><p>© 2026 Quad Rent Zagreb.</p><p>Velikopoljska 22A, Veliko Polje, Novi Zagreb</p></div></div></footer>
+<script src="main.js"></script>
+</body>
+</html>

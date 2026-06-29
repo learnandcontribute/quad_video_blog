@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="15+ off-road ruta u okolici Zagreba — šumske staze, obiteljske rute, adrenalinski izazovi. Vođene ture ili samostalno istraživanje s GPS-om.">
+<title>Rute — Quad Rent Zagreb</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mobile-menu" id="mobileMenu"><a href="index.html" onclick="toggleMenu()">Početna</a><a href="quad.html" onclick="toggleMenu()">Flota</a><a href="obitelj.html" onclick="toggleMenu()">Obitelj</a><a href="cijene.html" onclick="toggleMenu()">Cijene</a><a href="rute.html" onclick="toggleMenu()">Rute</a><a href="faq.html" onclick="toggleMenu()">Pitanja</a><a href="kontakt.html" onclick="toggleMenu()">Kontakt</a><a href="blog.html" onclick="toggleMenu()">Blog</a></div>
+<nav class="nav" id="nav"><div class="container nav__inner"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a><div class="nav__links"><a href="quad.html">Flota</a><a href="obitelj.html">Obitelj</a><a href="cijene.html">Cijene</a><a href="rute.html" class="active">Rute</a><a href="faq.html">Pitanja</a><a href="kontakt.html">Kontakt</a><a href="blog.html">Blog</a></div><button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button><button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button></div></nav>
+
+<section class="hero hero--short">
+  <div class="hero__bg ph"><span class="hero__bg-label">Foto — panorama staze, drone shot</span></div>
+  <div class="container hero__content">
+    <div class="section-overline">Rute</div>
+    <h1 class="hero__headline" style="margin-top:0.6rem">Od betona<br>do blata.</h1>
+    <p class="hero__sub">15+ off-road ruta direktno iz naše baze u Velikom Polju. Ne znate kamo? Mi znamo.</p>
+  </div>
+</section>
+
+<!-- ROUTE TYPES -->
+<section class="page-section reveal">
+  <div class="container">
+    <h2 class="section-title mb-3">Tri vrste avanture</h2>
+    <div class="grid-3">
+      <div class="card" style="overflow:hidden">
+        <div class="ph" style="aspect-ratio:16/10;min-height:180px"><span>Foto — široka šumska staza</span></div>
+        <div style="padding:1.2rem">
+          <div style="font-family:var(--font-d);font-weight:700;font-size:1rem;margin-bottom:0.3rem">🌲 Šumske staze</div>
+          <div style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Krenite direktno iz naše baze i odmah uronite u mrežu lokalnih neasfaltiranih puteva idealnih za testiranje vaših vještina. Savršeno za početnike i umjerene vozače.</div>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <div class="ph" style="aspect-ratio:16/10;min-height:180px;background:#1a1816"><span>Foto — par na quadu, pogled na prirodu</span></div>
+        <div style="padding:1.2rem">
+          <div style="font-family:var(--font-d);font-weight:700;font-size:1rem;margin-bottom:0.3rem">👨‍👩‍👧 Obiteljska ruta</div>
+          <div style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Široki makadami i blagi usponi s prekrasnim pogledima na prirodu. Savršeni za opuštenu vožnju u dvoje ili s djecom.</div>
+        </div>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <div class="ph" style="aspect-ratio:16/10;min-height:180px;background:#181a16"><span>Foto — quad u blatu, akcija</span></div>
+        <div style="padding:1.2rem">
+          <div style="font-family:var(--font-d);font-weight:700;font-size:1rem;margin-bottom:0.3rem">💪 Adrenalinski izazov</div>
+          <div style="font-size:0.68rem;color:var(--text-2);line-height:1.6">Za one koji traže jači tempo — staze s više blata, vode i prirodnih prepreka gdje naši Linhai i Segway modeli pokazuju svoju pravu moć.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDED vs SELF -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <h2 class="section-title mb-3">Kako želite voziti?</h2>
+    <div class="grid-2">
+      <div class="info-card" style="padding:1.2rem">
+        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div>
+          <div class="info-card__title">Vođena tura</div>
+          <div class="info-card__text" style="margin-bottom:0.5rem">Naš vodič vas vodi cijelom rutom. Idealno za početnike i obitelji. Sve objašnjeno, bez stresa, bez rizika da se izgubite.</div>
+          <span class="chip">Preporučeno za početnike</span>
+        </div>
+      </div>
+      <div class="info-card" style="padding:1.2rem">
+        <div class="info-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:18px;height:18px"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><path d="M8 2v16M16 6v16"/></svg></div>
+        <div>
+          <div class="info-card__title">Samostalno istraživanje</div>
+          <div class="info-card__text" style="margin-bottom:0.5rem">Dobivate GPS uređaj ili kartu s predloženim rutama prilagođenima quadovima. Vaš tempo, vaša avantura, vaša sloboda.</div>
+          <span class="chip chip--accent">GPS / karta uključena</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP + ROUTE LIST -->
+<section class="page-section reveal">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem" class="routes-layout">
+
+      <div class="ph" style="border-radius:var(--r-xl);min-height:350px;background:linear-gradient(135deg,#1a2118 0%,#111310 100%);position:relative;border:1px solid rgba(255,255,255,0.05)">
+        <div style="font-family:var(--font-d);font-weight:900;font-size:clamp(5rem,16vw,10rem);color:rgba(245,166,35,0.06);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1">15+</div>
+        <span style="position:relative;z-index:1">Interaktivna karta ruta — placeholder</span>
+      </div>
+
+      <div>
+        <div style="font-size:0.55rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.8rem">Izbor ruta</div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Veliko Polje – Šumske staze</div><div class="route-row__meta">~2h · 15km · Početnička</div></div><div class="route-row__diff"><i class="f"></i><i></i><i></i></div></div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Obiteljska ruta</div><div class="route-row__meta">~1.5h · 10km · Lagana</div></div><div class="route-row__diff"><i class="f"></i><i></i><i></i></div></div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Panoramska vožnja</div><div class="route-row__meta">~3h · 20km · Srednja</div></div><div class="route-row__diff"><i class="f"></i><i class="f"></i><i></i></div></div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Brdski off-road</div><div class="route-row__meta">~3h · 25km · Srednja</div></div><div class="route-row__diff"><i class="f"></i><i class="f"></i><i></i></div></div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Blato i teren</div><div class="route-row__meta">~4h · 30km · Zahtjevna</div></div><div class="route-row__diff"><i class="f"></i><i class="f"></i><i class="f"></i></div></div>
+        <div class="route-row"><div class="route-row__left"><div class="route-row__name">Zahtjevni trail</div><div class="route-row__meta">~5h · 35km · Zahtjevna</div></div><div class="route-row__diff"><i class="f"></i><i class="f"></i><i class="f"></i></div></div>
+        <p style="margin-top:0.8rem;font-size:0.6rem;color:var(--text-3)">Biramo rutu prema vašem iskustvu. Sve rute kreću iz naše baze u Velikom Polju.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="page-section reveal">
+  <div class="container" style="text-align:center">
+    <h2 class="section-title">Pretražili ste "ideje za izlet Zagreb"?</h2>
+    <p class="section-desc" style="margin:0.5rem auto 1.5rem;text-align:center">Na pravom ste mjestu. Odaberite rutu i rezervirajte termin.</p>
+    <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+  </div>
+</section>
+
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()"><div class="modal"><button class="modal__close" onclick="closeBooking()">✕</button><div class="modal__title">Rezerviraj vožnju</div><div class="modal__sub">Odaberi opcije i pošalji nam WhatsApp poruku</div><div class="modal__group"><label class="modal__label">Tip quada</label><div class="modal__toggle modal__toggle--3" id="typeToggle"><button class="modal__toggle-btn active" data-type="standard" onclick="setType('standard')">Standard<span class="toggle-price">550-650cc</span></button><button class="modal__toggle-btn" data-type="linhai1000" onclick="setType('linhai1000')">Linhai 1000<span class="toggle-price">1000cc</span></button><button class="modal__toggle-btn" data-type="kids" onclick="setType('kids')">Dječji<span class="toggle-price">6+ god</span></button></div></div><div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price" id="halfPrice">€100</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price" id="fullPrice">€150</span></button></div></div><div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div><div class="modal__group"><label class="modal__label">Broj quadova</label><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount(-1)">−</button><span class="modal__stepper-val" id="countVal">1</span><button class="modal__stepper-btn" onclick="changeCount(1)">+</button></div></div><div class="modal__summary"><div class="modal__summary-row"><span>Quad</span><span id="sumType">Quad (Segway / Linhai 550 / 650)</span></div><div class="modal__summary-row"><span>Trajanje</span><span id="sumDur">Pola dana (6h)</span></div><div class="modal__summary-row"><span>Quadova</span><span id="sumCount">1</span></div><div class="modal__summary-total"><span>Ukupno</span><span id="sumTotal">€100</span></div></div><button class="btn btn--accent btn--block" onclick="sendWhatsApp()" style="padding:0.85rem">Pošalji WhatsApp poruku</button><p class="modal__note">Potvrđujemo u minutama.</p></div></div>
+
+<footer class="footer"><div class="container"><div class="footer__top"><div class="footer__brand"><a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a></div><div><div class="footer__col-title">Stranice</div><ul class="footer__links"><li><a href="quad.html">Flota</a></li><li><a href="obitelj.html">Obitelj</a></li><li><a href="cijene.html">Cijene</a></li><li><a href="rute.html">Rute</a></li></ul></div><div><div class="footer__col-title">Info</div><ul class="footer__links"><li><a href="faq.html">Pitanja</a></li><li><a href="kontakt.html">Kontakt</a></li></ul></div><div><div class="footer__col-title">Kontakt</div><ul class="footer__links"><li><a href="https://wa.me/385955442541">WhatsApp</a></li><li><a href="tel:+385955442541">+385 95 544 2541</a></li></ul></div></div><div class="footer__bottom"><p>© 2026 Quad Rent Zagreb.</p><p>Velikopoljska 22A, Veliko Polje, Novi Zagreb</p></div></div></footer>
+<script src="main.js"></script>
+<style>@media(min-width:700px){.routes-layout{grid-template-columns:1.3fr 1fr !important}}</style>
+</body>
+</html>
