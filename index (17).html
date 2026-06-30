@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Najam quadova Zagreb — 10 novih quadova, 15+ off-road ruta, dječji quadovi od 6 god. Oprema uključena, fleksibilni paketi. Rezervirajte putem WhatsAppa.">
+<title>Quad Rent Zagreb — Najam quadova i off-road avanture</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" onclick="toggleMenu()">Početna</a>
+  <a href="quad.html" onclick="toggleMenu()">Flota</a>
+  <a href="obitelj.html" onclick="toggleMenu()">Obitelj</a>
+  <a href="cijene.html" onclick="toggleMenu()">Cijene</a>
+  <a href="rute.html" onclick="toggleMenu()">Rute</a>
+  <a href="faq.html" onclick="toggleMenu()">Pitanja</a>
+  <a href="o-nama.html" onclick="toggleMenu()">O nama</a>
+  <a href="blog.html" onclick="toggleMenu()">Blog</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a>
+    <div class="nav__links">
+      <a href="quad.html">Flota</a>
+      <a href="obitelj.html">Obitelj</a>
+      <a href="cijene.html">Cijene</a>
+      <a href="rute.html">Rute</a>
+      <a href="faq.html">Pitanja</a>
+      <a href="o-nama.html">O nama</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <button class="btn btn--accent btn--sm nav__book" onclick="openBooking()">Rezerviraj</button>
+    <button class="nav__hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Izbornik"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero__bg">
+    <video autoplay muted loop playsinline preload="metadata" poster="hero-poster.jpg"
+           style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+      <source src="hero.mp4" type="video/mp4">
+      <source src="hero.webm" type="video/webm">
+    </video>
+  </div>
+  <div class="container hero__content">
+    <div class="section-overline">Okolica Zagreba · Novi Zagreb</div>
+    <h1 class="hero__headline" style="margin-top:0.6rem">Vrijeme je da<br>zamijenite ekran<br>avanturom.</h1>
+    <p class="hero__sub">10 potpuno novih quadova. 15+ off-road ruta. Oprema, obuka i gorivo — sve uključeno. Vaša jedina briga je stisnuti gas.</p>
+    <div class="hero__actions">
+      <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+      <a href="cijene.html" class="btn btn--ghost">Pogledaj cijene</a>
+    </div>
+    <div class="hero__stats">
+      <div class="hero__stat"><div class="hero__stat-val">10</div><div class="hero__stat-label">Quadova</div></div>
+      <div class="hero__stat"><div class="hero__stat-val">od €100</div><div class="hero__stat-label">Pola dana</div></div>
+      <div class="hero__stat"><div class="hero__stat-val">15+</div><div class="hero__stat-label">Ruta</div></div>
+      <div class="hero__stat"><div class="hero__stat-val">16 god</div><div class="hero__stat-label">Iskustva</div></div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<section class="trust-bar reveal">
+  <div class="container">
+    <div class="trust-bar__grid">
+      <div class="trust-bar__item">
+        <div class="trust-bar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="trust-bar__title">10 novih quadova</div>
+        <div class="trust-bar__text">Potpuno nova flota, 4 modela, 550cc do 1000cc</div>
+      </div>
+      <div class="trust-bar__item">
+        <div class="trust-bar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="trust-bar__title">Sve uključeno</div>
+        <div class="trust-bar__text">Kaciga, naočale, rukavice, gorivo, obuka</div>
+      </div>
+      <div class="trust-bar__item">
+        <div class="trust-bar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="trust-bar__title">Za obitelji</div>
+        <div class="trust-bar__text">Dječji quadovi od 6 godina, 30km staza</div>
+      </div>
+      <div class="trust-bar__item">
+        <div class="trust-bar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="trust-bar__title">20 min od centra</div>
+        <div class="trust-bar__text">Veliko Polje, 10010 Zagreb — lako dostupno</div>
+      </div>
+      <div class="trust-bar__item">
+        <div class="trust-bar__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div class="trust-bar__title">16 god iskustva</div>
+        <div class="trust-bar__text">Profesionalni tim iz auto-industrije</div></div>
+  </div>
+</section>
+
+<!-- ═══ FLEET PREVIEW — compact ═══ -->
+<section class="page-section reveal">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-overline">Flota</div>
+        <h2 class="section-title mt-1">10 quadova. 4 modela. Potpuno novi.</h2>
+      </div>
+      <a href="quad.html" class="btn btn--ghost btn--sm">Detalji →</a>
+    </div>
+    <div class="fleet-mini">
+      <div class="fleet-mini__card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><span class="chip chip--accent" style="font-size:0.5rem">4 vozila</span><span style="font-family:var(--font-d);font-weight:700;font-size:1.2rem">€100</span></div>
+        <div style="font-family:var(--font-d);font-weight:700;font-size:0.92rem;margin-bottom:0.2rem">Segway AT5L</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-bottom:0.6rem">Agilnost · moderna tehnologija</div>
+        <div style="display:flex;gap:0.25rem;flex-wrap:wrap"><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">Automatik</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">4×4</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">Koferi</span></div>
+      </div>
+      <div class="fleet-mini__card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><span class="chip" style="font-size:0.5rem">2 vozila</span><span style="font-family:var(--font-d);font-weight:700;font-size:1.2rem">€100</span></div>
+        <div style="font-family:var(--font-d);font-weight:700;font-size:0.92rem;margin-bottom:0.2rem">Linhai 550L</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-bottom:0.6rem">Pouzdani · robusni · stabilni</div>
+        <div style="display:flex;gap:0.25rem;flex-wrap:wrap"><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">550cc</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">4×4</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">EFI</span></div>
+      </div>
+      <div class="fleet-mini__card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><span class="chip" style="font-size:0.5rem">2 vozila</span><span style="font-family:var(--font-d);font-weight:700;font-size:1.2rem">€100</span></div>
+        <div style="font-family:var(--font-d);font-weight:700;font-size:0.92rem;margin-bottom:0.2rem">Linhai 650 Landforce</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-bottom:0.6rem">Terenski ratnik · maskirni</div>
+        <div style="display:flex;gap:0.25rem;flex-wrap:wrap"><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">650cc</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">4×4</span><span class="chip chip--accent" style="font-size:0.48rem;padding:0.18rem 0.45rem">Off-road</span></div>
+      </div>
+      <div class="fleet-mini__card" style="border-color:rgba(245,166,35,0.15)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem"><span class="chip chip--accent" style="font-size:0.5rem">Kralj terena</span><span style="font-family:var(--font-d);font-weight:700;font-size:1.2rem">€100</span></div>
+        <div style="font-family:var(--font-d);font-weight:700;font-size:0.92rem;margin-bottom:0.2rem">Linhai 1000</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-bottom:0.6rem">Brutalna snaga · max adrenalin</div>
+        <div style="display:flex;gap:0.25rem;flex-wrap:wrap"><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">1000cc</span><span class="chip" style="font-size:0.48rem;padding:0.18rem 0.45rem">4×4</span><span class="chip chip--accent" style="font-size:0.48rem;padding:0.18rem 0.45rem">Max</span></div>
+      </div>
+    </div>
+    <p style="font-size:0.55rem;color:var(--text-3);margin-top:0.5rem">Svi quadovi: automatik, koferi, nosač mobitela, USB-C, prva pomoć, aparat za gašenje. Registrirani za 2 osobe. · <a href="quad.html" style="color:var(--accent)">Pogledaj sve detalje →</a></p>
+  </div>
+</section>
+
+<!-- ═══ KIDS TEASER ═══ -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center" class="kids-teaser-grid">
+      <div class="ph" style="border-radius:var(--r-xl);overflow:hidden;min-height:280px;aspect-ratio:16/10;border:1px solid rgba(245,166,35,0.12)"><span>Foto — djeca na malim quadovima, obitelj iza</span></div>
+      <div>
+        <span class="chip chip--accent mb-2">Jedini u Zagrebu</span>
+        <h2 class="section-title mt-2">Dovedi i klince.</h2>
+        <p class="section-desc">Dječji quadovi za djecu od 6 godina. 30km prikladnih staza u neposrednoj blizini. Mama i tata na velikim quadovima, djeca na svojima. Uz obavezan nadzor roditelja i našu obuku.</p>
+        <div style="display:flex;gap:0.8rem;flex-wrap:wrap;margin-top:1rem">
+          <span class="chip">6+ godina</span>
+          <span class="chip">Obuka uključena</span>
+          <span class="chip">Oprema gratis</span>
+          <span class="chip">od €60 / pola dana</span>
+        </div>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:1.2rem">
+          <a href="obitelj.html" class="btn btn--outline btn--sm">Saznaj više →</a>
+          <button class="btn btn--accent btn--sm" onclick="openBooking('kids','half')">Rezerviraj dječji quad</button>
+        </div></div>
+  </div>
+</section>
+
+<!-- ═══ PRICING PREVIEW — minimal ═══ -->
+<section class="page-section reveal">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-overline">Cijene</div>
+        <h2 class="section-title mt-1">Bez skrivenih troškova</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;max-width:500px" class="price-mini-grid">
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.2rem;text-align:center">
+        <div style="font-size:0.52rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.3rem">Odrasli</div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:2rem;line-height:1">€100</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-top:0.2rem">pola dana / 6h</div>
+        <div style="font-size:0.55rem;color:var(--text-2);margin-top:0.3rem">cijeli dan: €150</div>
+      </div>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.2rem;text-align:center">
+        <div style="font-size:0.52rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--success);margin-bottom:0.3rem">Dječji quad</div>
+        <div style="font-family:var(--font-d);font-weight:800;font-size:2rem;line-height:1">€60</div>
+        <div style="font-size:0.6rem;color:var(--text-3);margin-top:0.2rem">pola dana / 6h</div>
+        <div style="font-size:0.55rem;color:var(--text-2);margin-top:0.3rem">cijeli dan: €120</div>
+      </div>
+    </div>
+    <p style="font-size:0.6rem;color:var(--text-3);margin-top:0.8rem">Gorivo, oprema, obuka — sve uključeno. 4 modela, ista cijena. <a href="cijene.html" style="color:var(--accent)">Svi detalji i uvjeti →</a></p>
+    <button class="btn btn--accent mt-3" onclick="openBooking()">Rezerviraj vožnju →</button>
+  </div>
+</section>
+
+<!-- ═══ ROUTES TEASER ═══ -->
+<section class="page-section page-section--border reveal">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-overline">Rute</div>
+        <h2 class="section-title mt-1">Od betona do blata</h2>
+        <p class="section-desc">Ne znate kamo voziti? Lokacija nam je savršena polazišna točka. Vođena tura ili samostalno istraživanje s GPS-om.</p>
+      </div>
+      <a href="rute.html" class="btn btn--ghost btn--sm">Sve rute →</a>
+    </div>
+    <div class="grid-3">
+      <div class="info-card"><div class="info-card__title">Šumske staze</div>
+          <div class="info-card__text">Krenite direktno iz naše baze i uronite u mrežu neasfaltiranih puteva.</div></div>
+      <div class="info-card"><div class="info-card__title">Obiteljska ruta</div>
+          <div class="info-card__text">Široki makadami i blagi usponi s prekrasnim pogledima. Savršeno za dvoje ili obitelj.</div></div>
+      <div class="info-card"><div class="info-card__title">Adrenalinski izazov</div>
+          <div class="info-card__text">Više blata, vode i prirodnih prepreka. Za one koji traže jači tempo.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="page-section reveal">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Što kažu naši gosti</h2>
+      <span class="section-sub" style="display:flex;align-items:center;gap:0.3rem">
+        <span style="color:var(--accent)">★★★★★</span> Google Reviews
+      </span>
+    </div>
+    <div class="grid-3">
+      <div class="review-card">
+        <div class="review-card__head">
+          <div class="review-card__author"><div class="review-card__avatar">M</div><div><div class="review-card__name">Marko T.</div><div class="review-card__src">Google Review</div></div></div>
+          <div class="review-card__stars">★★★★★</div>
+        </div>
+        <p class="review-card__text tbd">⚠ Ovdje ide stvarna recenzija s Googlea.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-card__head">
+          <div class="review-card__author"><div class="review-card__avatar">A</div><div><div class="review-card__name">Ana K.</div><div class="review-card__src">Google Review</div></div></div>
+          <div class="review-card__stars">★★★★★</div>
+        </div>
+        <p class="review-card__text tbd">⚠ Druga recenzija — idealno od obitelji ili ekipe.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-card__head">
+          <div class="review-card__author"><div class="review-card__avatar">I</div><div><div class="review-card__name">Ivan P.</div><div class="review-card__src">TripAdvisor</div></div></div>
+          <div class="review-card__stars">★★★★★</div>
+        </div>
+        <p class="review-card__text tbd">⚠ Treća recenzija — blatnjavi, nasmijani i sretni ljudi prodaju priču.</p>
+      </div></div>
+</section>
+
+<!-- ═══ CTA BANNER ═══ -->
+<section class="page-section reveal">
+  <div class="container">
+    <div class="cta-banner" style="display:grid;grid-template-columns:1fr;gap:1.5rem" id="cta-grid">
+      <div style="display:flex;flex-direction:column;gap:1rem;position:relative">
+        <h2 class="cta-banner__title">Spreman za avanturu?</h2>
+        <p class="cta-banner__sub">Zgrabite ključeve i oslobodite zvijer. Rezervacija putem WhatsAppa — potvrđujemo u minutama.</p>
+        <div class="cta-banner__phone">+385 95 544 2541</div>
+        <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
+          <button class="btn btn--accent" onclick="openBooking()">Rezerviraj vožnju →</button>
+          <a href="o-nama.html" class="btn btn--ghost">Kontakt i lokacija</a>
+        </div>
+        <div style="font-size:0.6rem;color:var(--text-3);line-height:1.6;position:relative">
+          <strong style="color:var(--text-2)">Velikopoljska 22A</strong><br>
+          Veliko Polje, 10010 Zagreb<br>
+          Pon-Ned 07:00 – 22:00<br>
+          Besplatan i siguran parking
+        </div>
+      </div>
+      <div style="border-radius:var(--r-md);overflow:hidden;min-height:220px;border:1px solid var(--border)">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5568.963136108243!2d16.012577275775804!3d45.74149081489528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47667f6e2e41adf7%3A0xa85f0abc58bedd95!2sVelikopoljska%20ul.%2022a%2C%2010000%2C%20Veliko%20Polje%2C%20Croatia!5e0!3m2!1sen!2sus!4v1780252780141!5m2!1sen!2sus" width="100%" height="100%" style="border:0;min-height:220px;display:block;filter:saturate(0.3) brightness(0.8)" allowfullscreen loading="lazy"></iframe>
+      </div></div>
+</section>
+
+<!-- ═══ BOOKING MODAL ═══ -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeBooking()"><div class="modal"><button class="modal__close" onclick="closeBooking()">✕</button><div class="modal__title">Rezerviraj vožnju</div><div class="modal__sub">Odaberi quadove i pošalji WhatsApp poruku</div><div class="modal__group"><label class="modal__label">Trajanje</label><div class="modal__toggle" id="durationToggle"><button class="modal__toggle-btn active" data-dur="half" onclick="setDuration('half')">Pola dana<span class="toggle-price">6h</span></button><button class="modal__toggle-btn" data-dur="full" onclick="setDuration('full')">Cijeli dan<span class="toggle-price">12h</span></button></div></div><div class="modal__group"><label class="modal__label">Datum</label><input type="date" class="modal__input" id="bookDate"></div><div class="modal__group"><label class="modal__label">Odaberi quadove</label><div class="quad-picker"><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Segway AT5L</div><div class="quad-row__meta">€100 / €150 · max 4</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('segway',-1)">−</button><span class="modal__stepper-val" id="count-segway">0</span><button class="modal__stepper-btn" onclick="changeCount('segway',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 550L</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai550',-1)">−</button><span class="modal__stepper-val" id="count-linhai550">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai550',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 650 Landforce</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai650',-1)">−</button><span class="modal__stepper-val" id="count-linhai650">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai650',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Linhai 1000</div><div class="quad-row__meta">€100 / €150 · max 2</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('linhai1000',-1)">−</button><span class="modal__stepper-val" id="count-linhai1000">0</span><button class="modal__stepper-btn" onclick="changeCount('linhai1000',1)">+</button></div></div><div class="quad-row"><div class="quad-row__info"><div class="quad-row__name">Dječji quad</div><div class="quad-row__meta">€60 / €120 · max 2 · 6+ god</div></div><div class="modal__stepper"><button class="modal__stepper-btn" onclick="changeCount('kids',-1)">−</button><span class="modal__stepper-val" id="count-kids">0</span><button class="modal__stepper-btn" onclick="changeCount('kids',1)">+</button></div></div></div></div><div class="modal__summary" id="bookSummary"><div class="modal__summary-empty" id="summaryEmpty">Dodajte barem jedan quad</div><div class="modal__summary-total" id="summaryTotal" style="display:none"><span>Ukupno</span><span id="sumTotal">€0</span></div></div><button class="btn btn--accent btn--block" id="bookSubmit" onclick="sendWhatsApp()" style="padding:0.85rem" disabled>Pošalji WhatsApp poruku</button><p class="modal__note">Potvrđujemo u minutama.</p></div></div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1.5rem;margin-bottom:1.5rem">
+      <div>
+        <a href="index.html" class="nav__logo">Quad Rent Zagreb<small>Najam quadova · okolica Zagreba</small></a>
+        <p style="font-size:0.62rem;color:var(--text-3);line-height:1.6;max-width:280px;margin-top:0.5rem">10 novih quadova. 16 godina iskustva u auto-industriji. Velikopoljska 22A, Veliko Polje, 10010 Zagreb.</p>
+      </div>
+      <div style="display:flex;gap:2.5rem;flex-wrap:wrap">
+        <div>
+          <ul class="footer__links">
+            <li><a href="pravila.html">Pravila najma</a></li><li><button class="cookie-settings-link" onclick="reopenCookieSettings()">Postavke kolačića</button></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer__links">
+            <li><a href="https://wa.me/385955442541">WhatsApp</a></li>
+            <li><a href="tel:+385955442541">+385 95 544 2541</a></li>
+            <li style="font-size:0.52rem;color:var(--text-4);margin-top:0.2rem">Pon-Ned 07-22h</li>
+          </ul>
+          <div class="footer__socials mt-2"><a href="#">IG</a><a href="#">TT</a><a href="#">YT</a><a href="#">FB</a></div></div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Quad Rent Zagreb.</p>
+      <p>Velikopoljska 22A, Veliko Polje, 10010 Zagreb</p>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+// Inline fallback in case main.js doesn't load (preview mode)
+if (typeof openBooking === 'undefined') {
+const QUADS={segway:{half:100,full:150,max:4,label:'Segway AT5L'},linhai550:{half:100,full:150,max:2,label:'Linhai 550L'},linhai650:{half:100,full:150,max:2,label:'Linhai 650 Landforce'},linhai1000:{half:100,full:150,max:2,label:'Linhai 1000'},kids:{half:60,full:120,max:2,label:'Dječji quad'}};
+const DUR={half:'Pola dana (6h)',full:'Cijeli dan (12h)'};
+const ALIAS={standard:'segway'};
+let booking={counts:{segway:0,linhai550:0,linhai650:0,linhai1000:0,kids:0},duration:'half',date:''};
+const nav=document.getElementById('nav');if(nav)window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+window.toggleMenu=function(){const mm=document.getElementById('mobileMenu');const hb=document.getElementById('hamburger');if(!mm)return;const o=mm.classList.toggle('open');if(hb)hb.classList.toggle('active',o);document.body.style.overflow=o?'hidden':''};
+window.togFaq=function(b){const i=b.parentElement;const w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')};
+const di=document.getElementById('bookDate');if(di){const t=new Date();t.setDate(t.getDate()+1);di.value=t.toISOString().split('T')[0];di.min=new Date().toISOString().split('T')[0];booking.date=di.value;di.addEventListener('change',function(){booking.date=this.value});di.addEventListener('click',function(){if(typeof this.showPicker==='function'){try{this.showPicker()}catch(e){}}})}
+function updateAllCounts(){for(const k in booking.counts){const el=document.getElementById('count-'+k);if(el)el.textContent=booking.counts[k]}}
+window.openBooking=function(t,d){for(const k in booking.counts)booking.counts[k]=0;if(t){const r=ALIAS[t]||t;if(QUADS[r])booking.counts[r]=1}booking.duration=(d==='full')?'full':'half';setDuration(booking.duration);updateAllCounts();updateSum();const m=document.getElementById('bookingModal');if(m)m.classList.add('open');document.body.style.overflow='hidden'};
+window.closeBooking=function(){const m=document.getElementById('bookingModal');if(m)m.classList.remove('open');document.body.style.overflow=''};
+window.setDuration=function(d){booking.duration=d;document.querySelectorAll('#durationToggle .modal__toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.dur===d));updateSum()};
+window.changeCount=function(type,delta){if(!QUADS[type])return;booking.counts[type]=Math.max(0,Math.min(QUADS[type].max,booking.counts[type]+delta));const el=document.getElementById('count-'+type);if(el)el.textContent=booking.counts[type];updateSum()};
+function updateSum(){const s=document.getElementById('bookSummary');if(!s)return;s.querySelectorAll('.modal__summary-row').forEach(r=>r.remove());const totalEl=document.getElementById('summaryTotal');let total=0,hasAny=false;for(const k in booking.counts){const c=booking.counts[k];if(c>0){hasAny=true;const lt=c*QUADS[k][booking.duration];total+=lt;const r=document.createElement('div');r.className='modal__summary-row';r.innerHTML='<span>'+c+'× '+QUADS[k].label+'</span><span>€'+lt+'</span>';if(totalEl)s.insertBefore(r,totalEl);else s.appendChild(r)}}const emp=document.getElementById('summaryEmpty'),sub=document.getElementById('bookSubmit'),tv=document.getElementById('sumTotal');if(emp)emp.style.display=hasAny?'none':'block';if(totalEl)totalEl.style.display=hasAny?'flex':'none';if(tv)tv.textContent='€'+total;if(sub)sub.disabled=!hasAny}
+function fmtDate(s){if(!s)return'nije odabran';const d=new Date(s+'T00:00:00');const dn=['nedjelja','ponedjeljak','utorak','srijeda','četvrtak','petak','subota'];const mn=['siječnja','veljače','ožujka','travnja','svibnja','lipnja','srpnja','kolovoza','rujna','listopada','studenoga','prosinca'];return dn[d.getDay()]+', '+d.getDate()+'. '+mn[d.getMonth()]+' '+d.getFullYear()+'.'}
+window.sendWhatsApp=function(){const di=document.getElementById('bookDate'),date=di?di.value:'';let total=0,tq=0;const lines=[];for(const k in booking.counts){const c=booking.counts[k];if(c>0){const lt=c*QUADS[k][booking.duration];total+=lt;tq+=c;lines.push('• '+c+'× '+QUADS[k].label+' — €'+lt)}}if(lines.length===0)return;let m='Bok! Želim rezervirati quad vožnju:\n\n🏍 Quadovi:\n'+lines.join('\n')+'\n\n⏱ Trajanje: '+DUR[booking.duration]+'\n📅 Datum: '+fmtDate(date)+'\n👥 Ukupno quadova: '+tq+'\n💰 Ukupno: €'+total+'\n📏 Ograničenje: 100 km po quadu (dodatni km = €1)\n\nMolim potvrdu dostupnosti. Hvala!';window.open('https://wa.me/385955442541?text='+encodeURIComponent(m),'_blank')};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBooking()});
+const ro=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');ro.unobserve(x.target)}})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+window.acceptAllCookies=function(){localStorage.setItem('qrz_cookie_consent',JSON.stringify({necessary:true,analytics:true,marketing:true}));var b=document.getElementById('cookieBanner');if(b)b.classList.remove('show')};
+window.declineOptionalCookies=function(){localStorage.setItem('qrz_cookie_consent',JSON.stringify({necessary:true,analytics:false,marketing:false}));var b=document.getElementById('cookieBanner');if(b)b.classList.remove('show')};
+window.toggleCookieDetails=function(){var p=document.getElementById('cookieSettings');if(p)p.classList.toggle('show')};
+window.saveCookieSettings=function(){var a=document.getElementById('cookieAnalytics'),m=document.getElementById('cookieMarketing');localStorage.setItem('qrz_cookie_consent',JSON.stringify({necessary:true,analytics:a?a.checked:false,marketing:m?m.checked:false}));var b=document.getElementById('cookieBanner');if(b)b.classList.remove('show')};
+window.reopenCookieSettings=function(){var b=document.getElementById('cookieBanner'),p=document.getElementById('cookieSettings');if(b){b.classList.add('show');if(p)p.classList.add('show');try{var pr=JSON.parse(localStorage.getItem('qrz_cookie_consent'));if(pr){var a=document.getElementById('cookieAnalytics'),m=document.getElementById('cookieMarketing');if(a)a.checked=pr.analytics;if(m)m.checked=pr.marketing}}catch(e){}}};
+if(!localStorage.getItem('qrz_cookie_consent')){var cb=document.getElementById('cookieBanner');if(cb)setTimeout(function(){cb.classList.add('show')},500)}
+}
+</script>
+<!-- CTA grid responsive -->
+<style>
+  .kids-teaser-grid{grid-template-columns:1fr !important}
+  @media(min-width:700px){
+    .kids-teaser-grid{grid-template-columns:1.1fr 1fr !important}
+    #cta-grid{grid-template-columns:1fr 1fr !important}
+  }
+</style>
+<!-- COOKIE CONSENT -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner__inner">
+    <div>
+      <div class="cookie-banner__text">Koristimo kolačiće za poboljšanje vašeg iskustva. Neophodni kolačići su uvijek aktivni. Analitičke i marketinške kolačiće možete prihvatiti ili odbiti. <a href="pravila.html">Više informacija</a></div>
+      <div class="cookie-settings" id="cookieSettings">
+        <div class="cookie-cat"><div class="cookie-cat__info"><div class="cookie-cat__name">Neophodni</div><div class="cookie-cat__desc">Potrebni za rad stranice. Uvijek aktivni.</div></div><label class="cookie-cat__toggle"><input type="checkbox" checked disabled><span class="slider"></span></label></div>
+        <div class="cookie-cat"><div class="cookie-cat__info"><div class="cookie-cat__name">Analitički</div><div class="cookie-cat__desc">Pomažu nam razumjeti kako koristite stranicu.</div></div><label class="cookie-cat__toggle"><input type="checkbox" id="cookieAnalytics"><span class="slider"></span></label></div>
+        <div class="cookie-cat"><div class="cookie-cat__info"><div class="cookie-cat__name">Marketing</div><div class="cookie-cat__desc">Koriste se za prikazivanje relevantnih oglasa.</div></div><label class="cookie-cat__toggle"><input type="checkbox" id="cookieMarketing"><span class="slider"></span></label></div>
+        <button class="btn btn--ghost btn--sm" onclick="saveCookieSettings()" style="margin-top:0.6rem;width:100%">Spremi postavke</button>
+      </div>
+    </div>
+    <div class="cookie-banner__actions">
+      <button class="btn btn--accent" onclick="acceptAllCookies()">Prihvati</button>
+      <button class="btn btn--ghost" onclick="declineOptionalCookies()">Odbij</button>
+      <button class="cookie-banner__detail" onclick="toggleCookieDetails()">Postavke</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -34,40 +34,28 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-// ═══ BOOKING MODAL ═══
-const prices = {
-  segway: { half: 100, full: 150 },
-  linhai550: { half: 100, full: 150 },
-  linhai650: { half: 100, full: 150 },
-  linhai1000: { half: 100, full: 150 },
-  kids: { half: 60, full: 120 }
+// ═══ BOOKING MODAL — multi-quad cart ═══
+const QUADS = {
+  segway:     { half: 100, full: 150, max: 4, label: 'Segway AT5L' },
+  linhai550:  { half: 100, full: 150, max: 2, label: 'Linhai 550L' },
+  linhai650:  { half: 100, full: 150, max: 2, label: 'Linhai 650 Landforce' },
+  linhai1000: { half: 100, full: 150, max: 2, label: 'Linhai 1000' },
+  kids:       { half: 60,  full: 120, max: 2, label: 'Dječji quad' }
 };
 
-const maxCount = {
-  segway: 4,
-  linhai550: 2,
-  linhai650: 2,
-  linhai1000: 2,
-  kids: 2
-};
-
-const typeLabels = {
-  segway: 'Segway AT5L',
-  linhai550: 'Linhai 550L',
-  linhai650: 'Linhai 650 Landforce',
-  linhai1000: 'Linhai 1000',
-  kids: 'Dječji quad'
-};
-
-const durLabels = {
+const DUR_LABELS = {
   half: 'Pola dana (6h)',
   full: 'Cijeli dan (12h)'
 };
 
+// Legacy aliases for prefill from older pages (e.g. quad.html uses 'standard')
+const PREFILL_ALIASES = {
+  standard: 'segway'
+};
+
 let booking = {
-  type: 'segway',
+  counts: { segway: 0, linhai550: 0, linhai650: 0, linhai1000: 0, kids: 0 },
   duration: 'half',
-  count: 1,
   date: ''
 };
 
@@ -81,38 +69,36 @@ document.addEventListener('DOMContentLoaded', () => {
     dateInput.min = new Date().toISOString().split('T')[0];
     booking.date = dateInput.value;
     dateInput.addEventListener('change', function () { booking.date = this.value; });
+    // Klik bilo gdje na polje otvara kalendar (ne samo na ikonu)
+    dateInput.addEventListener('click', function () {
+      if (typeof this.showPicker === 'function') {
+        try { this.showPicker(); } catch (e) { /* tihi fallback na staro ponašanje */ }
+      }
+    });
   }
 });
 
-function openBooking(type, duration) {
-  booking.type = type || 'segway';
-  booking.duration = duration || 'half';
-  booking.count = 1;
-  setType(booking.type);
+function openBooking(prefillType, prefillDuration) {
+  // Reset
+  for (const k in booking.counts) booking.counts[k] = 0;
+  // Prefill 1 of the requested type (resolving legacy aliases)
+  if (prefillType) {
+    const resolved = PREFILL_ALIASES[prefillType] || prefillType;
+    if (QUADS[resolved]) booking.counts[resolved] = 1;
+  }
+  booking.duration = (prefillDuration === 'full') ? 'full' : 'half';
   setDuration(booking.duration);
-  const cv = document.getElementById('countVal');
-  if (cv) cv.textContent = booking.count;
-  document.getElementById('bookingModal').classList.add('open');
+  updateAllCounts();
+  updateSummary();
+  const modal = document.getElementById('bookingModal');
+  if (modal) modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function closeBooking() {
-  document.getElementById('bookingModal').classList.remove('open');
+  const modal = document.getElementById('bookingModal');
+  if (modal) modal.classList.remove('open');
   document.body.style.overflow = '';
-}
-
-function setType(type) {
-  booking.type = type;
-  if (booking.count > (maxCount[type] || 2)) {
-    booking.count = maxCount[type] || 2;
-    const cv = document.getElementById('countVal');
-    if (cv) cv.textContent = booking.count;
-  }
-  document.querySelectorAll('#typeToggle .modal__toggle-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.type === type);
-  });
-  updatePriceDisplay();
-  updateSummary();
 }
 
 function setDuration(dur) {
@@ -123,31 +109,55 @@ function setDuration(dur) {
   updateSummary();
 }
 
-function updatePriceDisplay() {
-  const hp = document.getElementById('halfPrice');
-  const fp = document.getElementById('fullPrice');
-  if (hp) hp.textContent = '€' + prices[booking.type].half;
-  if (fp) fp.textContent = '€' + prices[booking.type].full;
-}
-
-function changeCount(delta) {
-  booking.count = Math.max(1, Math.min(maxCount[booking.type] || 2, booking.count + delta));
-  const cv = document.getElementById('countVal');
-  if (cv) cv.textContent = booking.count;
+function changeCount(type, delta) {
+  if (!QUADS[type]) return;
+  const max = QUADS[type].max;
+  booking.counts[type] = Math.max(0, Math.min(max, booking.counts[type] + delta));
+  const el = document.getElementById('count-' + type);
+  if (el) el.textContent = booking.counts[type];
   updateSummary();
 }
 
+function updateAllCounts() {
+  for (const k in booking.counts) {
+    const el = document.getElementById('count-' + k);
+    if (el) el.textContent = booking.counts[k];
+  }
+}
+
 function updateSummary() {
-  const unitPrice = prices[booking.type][booking.duration];
-  const total = unitPrice * booking.count;
-  const st = document.getElementById('sumType');
-  const sd = document.getElementById('sumDur');
-  const sc = document.getElementById('sumCount');
-  const stot = document.getElementById('sumTotal');
-  if (st) st.textContent = typeLabels[booking.type];
-  if (sd) sd.textContent = durLabels[booking.duration];
-  if (sc) sc.textContent = booking.count;
-  if (stot) stot.textContent = '€' + total;
+  const summaryEl = document.getElementById('bookSummary');
+  if (!summaryEl) return;
+
+  // Remove previous dynamic line items (everything except empty + total)
+  summaryEl.querySelectorAll('.modal__summary-row').forEach(r => r.remove());
+
+  const totalEl = document.getElementById('summaryTotal');
+  let total = 0;
+  let hasAny = false;
+
+  for (const k in booking.counts) {
+    const count = booking.counts[k];
+    if (count > 0) {
+      hasAny = true;
+      const lineTotal = count * QUADS[k][booking.duration];
+      total += lineTotal;
+      const row = document.createElement('div');
+      row.className = 'modal__summary-row';
+      row.innerHTML = '<span>' + count + '× ' + QUADS[k].label + '</span><span>€' + lineTotal + '</span>';
+      if (totalEl) summaryEl.insertBefore(row, totalEl);
+      else summaryEl.appendChild(row);
+    }
+  }
+
+  const emptyEl = document.getElementById('summaryEmpty');
+  const submitEl = document.getElementById('bookSubmit');
+  const totalValEl = document.getElementById('sumTotal');
+
+  if (emptyEl) emptyEl.style.display = hasAny ? 'none' : 'block';
+  if (totalEl) totalEl.style.display = hasAny ? 'flex' : 'none';
+  if (totalValEl) totalValEl.textContent = '€' + total;
+  if (submitEl) submitEl.disabled = !hasAny;
 }
 
 function formatDate(dateStr) {
@@ -159,20 +169,30 @@ function formatDate(dateStr) {
 }
 
 function sendWhatsApp() {
-  const date = document.getElementById('bookDate').value;
-  const unitPrice = prices[booking.type][booking.duration];
-  const total = unitPrice * booking.count;
-  const quadType = typeLabels[booking.type];
-  const dur = durLabels[booking.duration];
-  const dateFormatted = formatDate(date);
+  const dateInput = document.getElementById('bookDate');
+  const date = dateInput ? dateInput.value : '';
+  let total = 0;
+  let totalQuads = 0;
+  const lines = [];
+
+  for (const k in booking.counts) {
+    const count = booking.counts[k];
+    if (count > 0) {
+      const lineTotal = count * QUADS[k][booking.duration];
+      total += lineTotal;
+      totalQuads += count;
+      lines.push('• ' + count + '× ' + QUADS[k].label + ' — €' + lineTotal);
+    }
+  }
+  if (lines.length === 0) return;
 
   let msg = 'Bok! Želim rezervirati quad vožnju:\n\n';
-  msg += '🏍 Quad: ' + quadType + '\n';
-  msg += '⏱ Trajanje: ' + dur + '\n';
-  msg += '📅 Datum: ' + dateFormatted + '\n';
-  msg += '👥 Broj quadova: ' + booking.count + '\n';
+  msg += '🏍 Quadovi:\n' + lines.join('\n') + '\n\n';
+  msg += '⏱ Trajanje: ' + DUR_LABELS[booking.duration] + '\n';
+  msg += '📅 Datum: ' + formatDate(date) + '\n';
+  msg += '👥 Ukupno quadova: ' + totalQuads + '\n';
   msg += '💰 Ukupno: €' + total + '\n';
-  msg += '📏 Ograničenje: 100 km (dodatni km = €1)\n\n';
+  msg += '📏 Ograničenje: 100 km po quadu (dodatni km = €1)\n\n';
   msg += 'Molim potvrdu dostupnosti. Hvala!';
 
   window.open('https://wa.me/385955442541?text=' + encodeURIComponent(msg), '_blank');
@@ -206,7 +226,6 @@ function setCookieConsent(prefs) {
 
 function applyCookiePrefs(prefs) {
   if (!prefs) return;
-  // Analytics: load GA if consented
   if (prefs.analytics && window.GA_ID) {
     if (!document.getElementById('ga-script')) {
       const s = document.createElement('script');
@@ -222,9 +241,8 @@ function applyCookiePrefs(prefs) {
       };
     }
   }
-  // Marketing: placeholder for future pixels
   if (prefs.marketing) {
-    // Load Facebook Pixel, etc. when ready
+    // Marketing pixels placeholder
   }
 }
 
@@ -270,7 +288,6 @@ function reopenCookieSettings() {
   if (banner) {
     banner.classList.add('show');
     if (panel) panel.classList.add('show');
-    // Restore current prefs to toggles
     const prefs = getCookieConsent();
     if (prefs) {
       const a = document.getElementById('cookieAnalytics');
@@ -281,12 +298,8 @@ function reopenCookieSettings() {
   }
 }
 
-// Init
 document.addEventListener('DOMContentLoaded', () => {
   const prefs = getCookieConsent();
-  if (!prefs) {
-    showCookieBanner();
-  } else {
-    applyCookiePrefs(prefs);
-  }
+  if (!prefs) showCookieBanner();
+  else applyCookiePrefs(prefs);
 });
